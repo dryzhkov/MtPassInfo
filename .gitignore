@@ -1,0 +1,8 @@
+# Visual Studio Code folder
+.vscode/
+
+# All Javascript files
+*.js
+
+# Node modules
+node_modules/

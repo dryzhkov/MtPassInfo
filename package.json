@@ -1,0 +1,22 @@
+{
+  "name": "travelerguide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --sequential tsc lint open:src",
+    "tsc": "tsc -p '.' --pretty",
+    "open:src": "node app/server.js",
+    "lint": "tslint './app/*.ts' --format stylish"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "typescript": "^2.1.4"
+  },
+  "devDependencies": {
+    "npm-run-all": "^3.1.2",
+    "tslint": "^4.1.1"
+  }
+}
