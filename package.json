@@ -4,19 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --sequential tsc lint open:src",
-    "tsc": "tsc -p '.' --pretty",
-    "open:src": "node app/server.js",
-    "lint": "tslint './app/*.ts' --format stylish"
+    "start": "npm-run-all --sequential lint tsc:server webpack open:src",
+    "tsc:all": "tsc -p '.' --pretty",
+    "tsc:server": "tsc './server/app.ts' --pretty",
+    "webpack": "webpack",
+    "open:src": "node ./server/app.js",
+    "lint": "tslint './server/*.ts' --format stylish && tslint ./src/**/*.tsx --format stylish"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/react": "^0.14.55",
+    "@types/react-dom": "^0.14.19",
     "express": "^4.14.0",
-    "typescript": "^2.1.4"
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
   },
   "devDependencies": {
+    "@types/node": "^6.0.52",
+    "awesome-typescript-loader": "^3.0.0-beta.17",
     "npm-run-all": "^3.1.2",
-    "tslint": "^4.1.1"
+    "source-map-loader": "^0.1.5",
+    "tslint": "^4.1.1",
+    "typescript": "^2.1.4",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0"
   }
 }
