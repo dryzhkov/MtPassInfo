@@ -1,5 +1,6 @@
 import * as React from "react";
 import Header from "./common/Header";
+import MtPassInfo from "./common/MtPassInfo";
 
 const StevensPassPage = () => {
   return (
@@ -7,6 +8,7 @@ const StevensPassPage = () => {
       <Header />
       <div className="jumbotron">
           <h1>Stevens Pass</h1>
+          <MtPassInfo id="10" />
       </div>
     </div>
   );

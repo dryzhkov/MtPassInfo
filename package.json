@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all --sequential tsc:server webpack open:src",
     "tsc:all": "tsc -p '.' --pretty",
-    "tsc:server": "tsc './server/app.ts' --pretty",
+    "tsc:server": "tsc './server/app.ts' --target es5 --pretty --moduleResolution node",
     "webpack": "webpack",
     "open:src": "node ./server/app.js",
     "lint": "tslint './server/*.ts' --format stylish && tslint ./src/**/*.tsx --format stylish"
@@ -18,6 +18,7 @@
     "@types/react-dom": "^0.14.19",
     "@types/react-router": "^2.0.41",
     "bootstrap": "^3.3.7",
+    "es6-promise": "^4.0.5",
     "express": "^4.14.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
