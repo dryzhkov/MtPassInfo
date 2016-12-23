@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --sequential lint tsc:server webpack open:src",
+    "start": "npm-run-all --sequential tsc:server webpack open:src",
     "tsc:all": "tsc -p '.' --pretty",
     "tsc:server": "tsc './server/app.ts' --target es5 --pretty --moduleResolution node",
     "webpack": "webpack",
