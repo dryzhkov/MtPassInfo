@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export interface AppProps { children: React.Component<any, any> }
+export interface AppProps { children: React.Component<any, any>; }
 
 const App = (props: AppProps) => {
   return (

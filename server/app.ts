@@ -1,5 +1,5 @@
 import * as express from "express";
-import {WSDOTService} from './services/wsdot';
+import {WSDOTService} from "./services/wsdot";
 import * as path from "path";
 
 const app = express();
