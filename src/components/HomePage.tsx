@@ -1,13 +1,12 @@
 import * as React from "react";
-import Header from "./common/Header";
+import MtPassInfo from "./common/MtPassesInfo";
 
 const HomePage = () => {
+  const mtPassFilter = [5, 10, 11]; // Mt. Pass IDs for Crystal, Snoq, and Stevens
   return (
-    <div className="container-fluid">
-      <Header />
-      <div className="jumbotron">
-          <h1>Hello from 1 and 2!</h1>
-      </div>
+    <div className="jumbotron">
+      <h1>Crystal, Snoqualmie, Stevens</h1>
+      <MtPassInfo mtPassFilter={mtPassFilter} />
     </div>
   );
 };

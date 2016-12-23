@@ -1,4 +1,5 @@
 import * as React from "react";
+import {Link} from "react-router";
 import * as MtPassDataModel from "../../../server/models/MtPassDataModel";
 
 export interface ConditionsListRowProps { condition: MtPassDataModel.Condition }
@@ -23,7 +24,7 @@ const ConditionsListRow = (props: ConditionsListRowProps) => {
   
   return (
     <tr>
-      <td>{condition.MountainPassName}</td>
+      <td><Link to={"/passes/" + condition.MountainPassId}>{condition.MountainPassName}</Link></td>
       <td>{condition.TemperatureInFahrenheit}</td>
       <td>{condition.RoadCondition}</td>
       <td>{condition.WeatherCondition}</td>
