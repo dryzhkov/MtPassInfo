@@ -1,17 +1,16 @@
 import * as React from "react";
 import Header from "./common/Header";
-import MtPassInfo from "./common/MtPassInfo";
+import MtPassInfo from "./common/MtPassesInfo";
 
-const StevensPassPage = () => {
+const MtPassesPage = () => {
   return (
     <div className="container-fluid">
       <Header />
       <div className="jumbotron">
-          <h1>Stevens Pass</h1>
-          <MtPassInfo id="10" />
+          <MtPassInfo />
       </div>
     </div>
   );
 };
 
-export default StevensPassPage;
+export {MtPassesPage};

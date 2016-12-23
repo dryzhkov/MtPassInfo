@@ -2,7 +2,7 @@ import * as React from "react";
 import { render } from 'react-dom';
 import { Route, Router, IndexRoute, browserHistory } from 'react-router';
 import HomePage from './components/HomePage';
-import StevensPassPage from './components/StevensPassPage';
+import {MtPassesPage} from './components/MtPassesPage';
 
 export interface AppProps { children: React.Component<any, any> }
 
@@ -18,7 +18,7 @@ render(
     <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={HomePage}/>
-            <Route path="stevens-pass" component={StevensPassPage}/>
+            <Route path="passes" component={MtPassesPage}/>
         </Route>
     </Router>,
     document.getElementById("app")

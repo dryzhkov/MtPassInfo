@@ -1,8 +1,9 @@
 import * as http from "http";
+import * as MtPassDataModel from "../../server/models/MtPassDataModel";
 
 class MtPassesApi {
   
-  public static getConditions(): Promise<string> {
+  public static getConditions(): Promise<MtPassDataModel.Condition[]> {
 
     return new Promise((resolve, reject) => {
       http.get("/api/passes", (response: http.IncomingMessage) => {
